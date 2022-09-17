@@ -1,0 +1,26 @@
+variavel,significado,tipo
+ID,Identificador unico,continuo
+LIMIT_BAL,Valor do crédito concedido (Novo Dolár Taiwanês ),continuo
+SEX,Genero (1= masculino; 2= feminino),nominal
+EDUCATION,Educação Nivel de Escolaridade (1 = pós-graduação; 2 = universidade; 3 = ensino médio; 4 = outros),nominal
+MARRIAGE,Estado civil (1 = casado; 2 = solteiro; 3 = outros),nominal
+AGE,Idade,continuo
+PAY_0,Status do pagamento em setembro de 2005 (-1 = pago em dia; 1 = atraso no pagamento por um mês; 2 = atraso no pagamento por dois meses; ...; assim por diante),continuo
+PAY_2,"status do pagamento em agosto de 2005 ",continuo
+PAY_3,"status do pagamento em julho de 2005 ",continuo
+PAY_4,"status do pagamento em junho de 2005 ",continuo
+PAY_5,"status do pagamento em maio de 2005 ",continuo
+PAY_6,"status do pagamento em abril de 2005 ",continuo
+BILL_AMT1,Valor do extrato da conta em setembro de 2005 (Novo Dolár Taiwanês ),continuo
+BILL_AMT2,"Valor do extrato da conta em agosto de 2005 ",continuo
+BILL_AMT3,"Valor do extrato da conta em julho de 2005 ",continuo
+BILL_AMT4,"Valor do extrato da conta em junho de 2005 ",continuo
+BILL_AMT5,"Valor do extrato da conta em maio de 2005 ",continuo
+BILL_AMT6,"Valor do extrato da conta em abril de 2005 ",continuo
+PAY_AMT1,Valor pago em setembro de 2005 (Novo Dolár Taiwanês ),continuo
+PAY_AMT2,"Valor pago em agosto de 2005 ",continuo
+PAY_AMT3,"Valor pago em julho de 2005 ",continuo
+PAY_AMT4,"Valor pago em junho de 2005 ",continuo
+PAY_AMT5,"Valor pago em maio de 2005 ",continuo
+PAY_AMT6,"Valor pago em abril de 2005 ",continuo
+default payment next month,Empregada na pesquisa como varievel de resposta (Variavel binaria),nominal
