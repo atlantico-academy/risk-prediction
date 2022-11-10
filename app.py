@@ -8,7 +8,14 @@ import streamlit as st
 import pandas as pd
 
 
-locale.setlocale(locale.LC_TIME, 'pt_BR.utf-8')
+from st_on_hover_tabs import on_hover_tabs
+import streamlit as st
+st.set_page_config(layout="wide")
+st.sidebar.image('assets/img/logo.png', width=100)
+st.markdown('<style>' + open('./assets/style.css').read() + '</style>', unsafe_allow_html=True)
+
+
+locale.setlocale(locale.LC_TIME, 'pt_BR.UTF-8')
 hoje = datetime.datetime.now()
 model = load('models/model.joblib')
 
@@ -18,6 +25,8 @@ columns = [
     'BILL_AMT4', 'BILL_AMT5', 'BILL_AMT6', 'PAY_AMT1', 'PAY_AMT2', 'PAY_AMT3',
     'PAY_AMT4', 'PAY_AMT5', 'PAY_AMT6'
 ]
+
+
 
 def main():
     inputs = {}
@@ -70,5 +79,29 @@ def main():
     st.write(saida)
     
 
-if __name__ == '__main__':
+
+
+with st.sidebar:
+    tabs = on_hover_tabs(tabName=['Home', 'Análise Exploratória', 'Análise Comparativa','Sobre nós'], 
+                         iconName=['house', 'book', 'book','person lines fill'], default_choice=0, styles = {'navtab': {'background-color':'#003781'}})
+
+if tabs =='Home':
+    st.title("Home")
+    st.write('Conteudo {}'.format(tabs))
     main()
+
+elif tabs == 'Análise Exploratória':
+    st.title("Análise Exploratória")
+    st.write('Conteudo {}'.format(tabs))
+
+elif tabs == 'Análise Comparativa':
+    st.title("Tom")
+    st.write('Conteudo {}'.format(tabs))
+
+elif tabs == 'Sobre nós':
+    st.title("Sobre nós")
+    st.write('Conteudo {}'.format(tabs))   
+
+    
+#if __name__ == '__main__':
+    
