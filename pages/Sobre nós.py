@@ -1,17 +1,22 @@
 import streamlit as st
-
+import random
 
 st.title("Noctua")
 sidebar = st.sidebar.image('assets/img/logo.png')  
 
 
-st.markdown("## Desenvolvedores")
+equipe = [
+    "- [Deiferson da Silva Moura](https://github.com/deiferson)",
+    "- [Francisco Leocassio da Silva](https://github.com/leocassiosilva)",
+    "- [Gabriel Lucas Silva Felix](https://github.com/gabriellfelix)",
+    "- [Letícia Dayana de Campos](https://github.com/leticiadcampos92)",
+    "- [Luciano Silva de Arruda](https://github.com/lucenfort)",
+    "- [Marcello Alexandre Rodrigues Filho](https://github.com/marcelloale)",
+    "- [Maria Luísa Leandro de Lima](https://github.com/maluwastaken)",
+    "- [Tessele Sampaio Lopes](https://github.com/tesselesampaio)"
+]
 
-st.markdown("- [Deiferson da Silva Moura](https://github.com/deiferson)")
-st.markdown("- [Francisco Leocassio da Silva](https://github.com/leocassiosilva)")
-st.markdown("- [Gabriel Lucas Silva Felix](https://github.com/gabriellfelix)")
-st.markdown("- [Letícia Dayana de Campos](https://github.com/leticiadcampos92)")
-st.markdown("- [Luciano Silva de Arruda](https://github.com/lucenfort)")
-st.markdown("- [Marcello Alexandre Rodrigues Filho](https://github.com/marcelloale)")
-st.markdown("- [Maria Luísa Leandro de Lima](https://github.com/maluwastaken)")
-st.markdown("- [Tessele Sampaio Lopes](https://github.com/tesselesampaio)")
+random.shuffle(equipe)
+
+for member in equipe:
+    st.markdown(member)
