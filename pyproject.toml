@@ -21,6 +21,9 @@ mkdocs-glightbox = "^0.1.7"
 pre-commit = "^2.20.0"
 seaborn = "^0.11.2"
 xlrd = "^2.0.1"
+Locales = "^0.0.2"
+sklearn = "^0.0.post1"
+plotly = "^5.11.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
