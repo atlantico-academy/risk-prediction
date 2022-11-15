@@ -1,7 +1,7 @@
 import datetime
 from datetime import timedelta
 from dateutil.relativedelta import relativedelta
-import locale
+#import locale
 from joblib import load
 import pandas as pd
 import streamlit as st
@@ -14,7 +14,7 @@ import plotly.graph_objects as go
 st.set_page_config(layout="wide")
 # st.sidebar.image('assets/img/logo.png', width=100)
 
-locale.setlocale(locale.LC_TIME, 'pt_BR.UTF-8')
+#locale.setlocale(locale.LC_TIME, 'pt_BR.UTF-8')
 hoje = datetime.datetime.now()
 
 model = load('models/model.joblib')
@@ -85,14 +85,13 @@ def main():
         
         
         saida = model.predict_proba(X)        
-        go_chart = 900 #saida[0][1]*1000 
+        go_chart = saida[0][0]*1000 
         
         fig = go.Figure(go.Indicator(
                 domain = {'x': [0,1], 'y': [0, 1]},
                 value = go_chart,
                 mode = "gauge+number",
                 title = {'text': "Score"},
-                delta = {'reference': 500},
                 gauge = {'axis': {'range': [None, 1000]},
                          'bar': {'color': "#505050"},
                          'steps' : [
@@ -133,7 +132,7 @@ def main():
                 </center>
                 """, unsafe_allow_html=True)
 
-      #'decreasing.symbol': '🥺 - Reprovado, pontos abaixo do minimo:','increasing.symbol': '😊 - Aprovado, pontuação acima do minimo:',  
+      
 
             
 if __name__ == '__main__':
